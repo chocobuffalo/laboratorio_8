@@ -4,8 +4,7 @@
 
 // Parte 1 del Script
 function computer(){
-numerx = (Math.random() * 10)%3;
-numero = Math.floor(numerx);
+numero = Math.floor((Math.random()*3)+1
 return numero;
 }
 function traduce(opcion){
