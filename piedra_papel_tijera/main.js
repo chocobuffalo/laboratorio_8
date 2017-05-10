@@ -10,7 +10,7 @@ function aleatorio(minimo,maximo){
 }
 var mensaje;
 var opciones = ["Piedra", "Papel", "Tijeras"];
-var pc = aleatorio(0,4);
+var pc = aleatorio(0,2);
 			if(opcionUsuario == pc)
 			{
 				mensaje = "<h2>¡Es un empate!</h2>";
