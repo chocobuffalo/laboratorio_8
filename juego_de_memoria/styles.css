@@ -1,0 +1,41 @@
+.content{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 10px;
+
+}
+.llenar_inventario,.pintar_pared{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	text-align: center;
+	align-items: center;
+	width: 300px;
+	border: 1px solid black;
+}
+
+.pintura,.agua{
+	display: flex;
+	flex-direction: row;
+	max-height: 50px;
+
+}
+
+.pintura h3, .agua h3, #texto_pintura, #texto_agua{
+	flex: 1;
+}
+#log{
+	height: 200px;
+}
+.container{
+	justify-content: center;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+}
+.pintar_pared{
+	display: none;
+}
