@@ -30,10 +30,6 @@ var pc = aleatorio(0,4);
 			{
 				mensaje = "<h2>¡Has perdido!</h2>";
 			}
-
- /*En este apartado deshabilitamos la "Página de Juego" y mostramos el resultado de la partida con HTML.
- Dando las opciones al usuario de volver a la "Página Principal" y a la "Página de Juego."*/  
-	document.getElementById('juego').style.display = "none";		
 	document.getElementById('resultado').style.display = "block";
 	document.getElementById('resultado').innerHTML = 
 
