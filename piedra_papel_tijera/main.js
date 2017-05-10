@@ -31,13 +31,12 @@ compute = computer();
 
 usuario=traduce(opcion);
 computadora=traduce(compute);
-gamec.innerHTML="Usuario : "+usuario+" vs Computadora : " + computadora + "
-";
-// si el usuario es píedra y la computadora tijera
+gamec.innerHTML="Usuario : "+usuario+" vs Computadora : "+computadora+;
+// si el usuario es pÃ­edra y la computadora tijera
 if(opcion==0 && compute ==2){
       gamec.innerHTML=gamec.innerHTML+"EL Usuario Gana";
 }
-// si el usuario es píedra y la computadora papel
+// si el usuario es pÃ­edra y la computadora papel
 else if(opcion==0 && compute==1){
       gamec.innerHTML=gamec.innerHTML+"La Computadora Gana";
 }
