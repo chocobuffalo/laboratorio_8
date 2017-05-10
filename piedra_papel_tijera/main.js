@@ -35,7 +35,6 @@ var pc = aleatorio(0,4);
 
 	"<p><span>Tú</span> has elegido " + "<span>" + opcionUsuario + "</span>" + 
 	" y <span>Computadora</span> ha elegido " + "<span>" + pc + "</span>" 
-	+ ".</p>" + mensaje + "<h3 onClick='volver()'>Volver a jugar</h3>" + 
-	 "<a onClick='inicial()'>Volver a la página principal</a>";
+	+ ".</p>" + mensaje + "<h3 onClick='volver()'>Volver a jugar</h3>";
 
 }
