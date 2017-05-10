@@ -1,41 +1,69 @@
-.content{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding: 10px;
-
-}
-.llenar_inventario,.pintar_pared{
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-	text-align: center;
-	align-items: center;
-	width: 300px;
-	border: 1px solid black;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body{
+  font-family:Open Sans;
 }
 
-.pintura,.agua{
-	display: flex;
-	flex-direction: row;
-	max-height: 50px;
-
+#jugar{
+  border:1px solid #ddd;
+  padding:20px;
+  text-align:center;
 }
 
-.pintura h3, .agua h3, #texto_pintura, #texto_agua{
-	flex: 1;
+table.game-container{
+  border-collapse: collapse;
+  border:1px solid #fff;
+  margin:auto;
 }
-#log{
-	height: 200px;
+
+table.game-container td{
+  border:1px solid #ddd;
+  cursor:pointer;
+  height:40px;
+  width:40px;
+  text-align:center;
 }
-.container{
-	justify-content: center;
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	width: 400px;
+
+table.game-container td span{
+  background:#eee;
+  display:block;
+  width:100%;
+  height:100%;
+  line-height:40px;
 }
-.pintar_pared{
-	display: none;
+
+table.game-container td span.success{
+  background:#2ec32e;
+  display:block;
+}
+
+table.game-container td span.select{
+  background:#53d1ef;
+  font-weight:bold;
+  display:block;
+}
+
+table.game-container td span.none{
+  display:none;
+}
+
+div.game-dashboard{
+  display:block;
+  padding:20px;
+  font-size:14px;
+  text-align:center;
+  background:#ddd;
+  margin-bottom:20px;
+}
+
+div.game-comments{
+  display:block;
+  padding:20px;
+  font-size:14px;
+  text-align:center;
+  color:#aaa;
+}
+
+#start{
+  padding:20px;
+  font-size:16px;
 }
