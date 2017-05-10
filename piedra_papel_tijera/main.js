@@ -1,7 +1,4 @@
-function mostrar(){	
-	document.getElementById('inicial').style.display='none';
-	document.getElementById('juego').style.display='block';
-}
+
 function volver(){
 	document.getElementById('resultado').style.display='none';
 	document.getElementById('juego').style.display='block';
