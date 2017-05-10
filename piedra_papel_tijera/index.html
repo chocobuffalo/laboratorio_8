@@ -6,7 +6,7 @@ Piedras , Papel y Tijeras
 <style>
 #contenedor{
 
-  background: #ffcc00;
+ /// background: #ffcc00;
   width:850px;
   margin: 0 auto;
   box-shadow: 2px 0px 10px #6d5700;
@@ -139,28 +139,13 @@ a{
 </style>
 </head>
 <body>
-<div Id="contenedor">
-
- <!--"Página inicial" del juego.-->   
+<div Id="contenedor">  
 		<div id="inicial">
-
-		<h1>¡Piedra, Papel o Tijeras!</h1>
-      
-<!--"Al hacer clic llamamos a la función "mostrar" que hemos definido en el archivo JavaScript.-->      
+		<h1>¡Piedra, Papel o Tijeras!</h1>     
 		<h2 onClick="mostrar()">Clic aquí para jugar</h2>
-      
-<!--Imagen que explica las reglas.-->
-		<img src="http://i58.tinypic.com/w9wayx.png"/>
-
 		</div>
-
-<!--"Página del juego". En este apartado elegimos nuestra jugada y ya estamos dentro del juego.-->
 		<div id="juego">
-
-		<h1>¡Elije jugada...!</h1>	
-
-<!--Jugadas... Cada uno de estos "input" de tipo "image" es una posible jugada. Al hacer clic en la imagen de tipo "input" simplemente llamamos a la función
-"jugar" definida en el archivo o código JavaScript introduciendo como parámetro de la función la jugada elegida por el usuario.-->				
+		<h1>¡Elije jugada...!</h1>		
 				<div>
 					<input type="image" onClick="jugar('Piedra')" src="http://i61.tinypic.com/2urxzsh.png"/> 
 				</div>
@@ -169,15 +154,10 @@ a{
 				</div>
 				<div>
 					<input type="image" onClick="jugar('Tijeras')" src="http://i58.tinypic.com/20f722u.png"/> 
-				</div>
-		
-		<h2>Computador está eligiendo...</h2>
-				
-		</div>
-
-<!--En este apartado mostramos el resultado de la partida.-->  
+				</div>	
+		<h2>Computador está eligiendo...</h2>			
+		</div>  
 		<div id="resultado"></div>	
-
 </div>		
 </body>
 </html>
