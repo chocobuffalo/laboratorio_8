@@ -1,65 +1,49 @@
-// 0 : piedras
-// 1 : papel
-// 2 : tijeras
+//Juego piedra papel o tijeras.
 
-// Parte 1 del Script
-function computer(){
-numero = Math.floor((Math.random()*3)+1
-return numero;
-}
-function traduce(opcion){
-if(opcion==0){
-data="Piedras";
-}
-else if(opcion==1){
-data="Papel";
-}
-else if(opcion==2){
-data="Tijeras";
-}
-return data;
-}
-function me(opcion){
+//Primera parte del juego, pide al usuario que elija entre piedra, papel o tijera.
+var decisionUsuario = prompt("¿Piedra, papel o tijera?");
 
-gamec = document.getElementById("game");
-gamec.innerHTML="Iniciando ...";
-gamec.innerHTML="";
+//Segunda parte del juego. El ordenador "decide" su elección de forma aleatoria.
+var aleatorio = function() {
+    var numero =  Math.floor((Math.random()*3)+1); 
+    var respuesta;
+    if (numero == 1) {
+        respuesta = "Piedra";
+    } else if (numero == 2) {
+        respuesta = "Papel";
+    } else {
+        respuesta = "Tijera";
+    }
+    return respuesta;
+};
 
-// Parte 1 Para Piedras
-compute = computer();
+var decisionOrdenador = aleatorio();
+console.log ("Usuario: " +decisionUsuario + ", Ordenador: " +decisionOrdenador);
 
-usuario=traduce(opcion);
-computadora=traduce(compute);
-gamec.innerHTML="Usuario : "+usuario+" vs Computadora : "+computadora;
-// si el usuario es píedra y la computadora tijera
-if(opcion==0 && compute ==2){
-      gamec.innerHTML=gamec.innerHTML+"EL Usuario Gana";
-}
-// si el usuario es píedra y la computadora papel
-else if(opcion==0 && compute==1){
-      gamec.innerHTML=gamec.innerHTML+"La Computadora Gana";
-}
-// Parte 2 Para Papel
-// si el usuario pone Papel y la computadora piedras
-else if(opcion==1 && compute ==0){
-gamec.innerHTML=gamec.innerHTML+"El Usuario Gana";
-}
-// si el usuario pone Papel y la computadora Tijeras
-else if(opcion==1 && compute ==2){
-      gamec.innerHTML=gamec.innerHTML+"La Computadora Gana";
-}
-// Parte 3 Para Tijeras
-// si el usuario pone tijeras y la computadora piedras
-else if(opcion==2 && compute==0){
-      gamec.innerHTML=gamec.innerHTML+"La Computadora Gana";
-}
-// si el usuario pone tijeras y la computadora papel
-else if(opcion==2&&compute==1){
-      gamec.innerHTML=gamec.innerHTML+"El Usuario Gana";
-}
-// si Los dos Son Lo mismo
-else {
-      gamec.innerHTML=gamec.innerHTML+"Nadie Gana";
-}
+logicaJuego(decisionUsuario, decisionOrdenador);
 
-}
+//Tercera parte del juego. Se decide quién es el ganador
+var logicaJuego = function(decisionUsuario, decisionOrdenador) {
+    if (decisionUsuario == decisionOrdenador) {
+        return console.log("Empate, los dos eligieron " +decisionUsuario);
+    } else {
+        if (decisionUsuario == "Piedra" && decisionOrdenador == "Papel") {
+            console.log(""+decisionUsuario +" vs " +decisionOrdenador + ", gana el ordenador.");
+        } 
+        if (decisionUsuario == "Piedra" && decisionOrdenador == "Tijera") {
+            console.log(""+decisionUsuario +" vs " +decisionOrdenador + ", gana el usuario");
+        } 
+        if (decisionUsuario == "Papel" && decisionOrdenador == "Tijera") { 
+            console.log(""+decisionUsuario +" vs " +decisionOrdenador + ", gana el ordenador.");
+         }
+         if (decisionUsuario == "Papel" && decisionOrdenador == "Piedra"){
+            console.log(""+decisionUsuario +" vs " +decisionOrdenador + ", gana el usuario");
+        }
+         if (decisionUsuario == "Tijera" && decisionOrdenador == "Piedra") {
+            console.log(""+decisionUsuario +" vs " +decisionOrdenador + ", gana el ordenador.");
+            }
+         if (decisionUsuario == "Tijera" && decisionOrdenador == "Papel") {
+            console.log(""+decisionUsuario +" vs " +decisionOrdenador + ", gana el usuario");
+        }
+    }
+};
