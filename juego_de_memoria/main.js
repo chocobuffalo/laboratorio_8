@@ -10,12 +10,10 @@ document.querySelector("#start").addEventListener('click', function(){
 })
 function memoria(conf){
     if(conf.col % 2 > 0) {
-        console.log('Only pair numbers');
         return;
     }
     
     if(conf.row % 2 > 0) {
-        console.log('Only pair numbers');
         return;
     }
     
@@ -90,7 +88,7 @@ function memoria(conf){
         var n = Math.ceil((conf.col * conf.row)*0.3);
         
         var interval = setInterval(function(){
-            dashboard.innerHTML = 'The game will be start in ' + n + ' seconds ..';
+            dashboard.innerHTML = 'El juego empieza en ' + n + ' ssegundos ..';
             
             if(n === 0){
                 cleansTds();
@@ -108,7 +106,7 @@ function memoria(conf){
                 clearInterval(interval);
                 gameOver();
             } else {
-                dashboard.innerHTML = 'You have ' + (p.timeForPlay--) + ' seconds left for try to win the game :) ..';                
+                dashboard.innerHTML = 'Tienes' + (p.timeForPlay--) + ' segundos para intentar ganar el juego :) ..';                
             }
         }, 1000);
     }
@@ -116,9 +114,9 @@ function memoria(conf){
     function gameOver(){
         p.gameOver = true;
         if(p.maxPoints === p.points){
-            dashboard.innerHTML = 'You win this fucking amazing game with ' + p.points + ' points :)';
+            dashboard.innerHTML = 'Ganaste con ' + p.points + ' puntos :)';
         }else{
-            dashboard.innerHTML = 'You loose this game ..';
+            dashboard.innerHTML = 'Looserrr :(';
         }
     }
     
@@ -150,7 +148,7 @@ function memoria(conf){
                 p.clicked[1].className = 'success';
                 p.points += p.perSuccess;
                 
-                comments.innerHTML = 'You gain ' + p.perSuccess + ' points. Now you have ' + p.points + ' points ...';
+                comments.innerHTML = 'Has ganado ' + p.perSuccess + ' puntos. Ahora tienes ' + p.points + ' puntos ...';
             } else{ // Fails
                 p.started = false;
                 setTimeout(function(){
